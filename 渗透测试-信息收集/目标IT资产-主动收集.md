@@ -1,10 +1,10 @@
-# 1. 交互泄露
+## 1. 交互泄露
 
 1. html，js，css等返回内容中的信息
 2. 响应头信息，如CSP（Content-Security-Policy）头，Access-Control-Allow-Origin头
 3. RSS订阅
 
-# 2. 爆破
+## 2. 爆破
 
 1. oneforall
 2. ESD
@@ -18,17 +18,17 @@
 10. Sudomy：https://github.com/Screetsec/Sudomy
 
 
-## 2.1. 字典
+### 2.1. 字典
 
 1. 弱口令: https://www.bugku.com/mima
 2. 默认口令: https://cirt.net/passwords
 3. 个人字典: https://github.com/k8gege/PasswordDic
 
 
-### 2.1.1. 文件路径
+#### 2.1.1. 文件路径
 
 
-#### 2.1.1.1. 组件
+##### 2.1.1.1. 组件
 
 | 文件路径              | 类型              |
 | --------------------- | ----------------- |
@@ -48,17 +48,17 @@
 | nginx.conf            | nginx配置文件泄露 |
 | phpinfo.php           | php信息泄露       |
 
-#### 2.1.1.2. 其他文件
+##### 2.1.1.2. 其他文件
 
 1. [路径字典](渗透测试-信息收集/路径字典.md)
 
-## 2.2. 一些思路
+### 2.2. 一些思路
 
 1. 寻找测试业务，如test.bytedance.com
 2. 寻找遗弃老版本api，如/api/v3可以尝试/api/v1
 3. 泛解析问题：通过解析随机子域名进行判断
 
-# 3. 域传送漏洞
+## 3. 域传送漏洞
 
 基础信息参考[DNS](渗透测试-信息收集/DNS.md)
 

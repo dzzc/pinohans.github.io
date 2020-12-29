@@ -1,4 +1,4 @@
-# 1. 证书透明度查询
+## 1. 证书透明度查询
 
 > 要向用户提供加密流量，网站必须先向可信的证书授权中心 (CA) 申请证书。然后，当用户尝试访问相应网站时，此证书即会被提供给浏览器以验证该网站。近年来，由于 HTTPS 证书系统存在结构性缺陷，证书以及签发证书的 CA 很容易遭到入侵和操纵。Google 的证书透明度项目旨在通过提供一个用于监测和审核 HTTPS 证书的开放式框架，来保障证书签发流程安全无虞。 -- google
 
@@ -10,14 +10,14 @@
 6. censys: https://censys.io/certificates
 7. google: https://google.com/transparencyreport/https/ct
 
-# 2. 网络空间搜索引擎
+## 2. 网络空间搜索引擎
 
 1. fofa: https://fofa.so
 2. shodan: https://www.shodan.io
 3. zoomeye: https://www.zoomeye.org
 4. binaryedge: https://app.binaryedge.io/services/domains
 
-## 2.1. 搜索技巧
+### 2.1. 搜索技巧
 
 ```bash
 # 较为准确的方式，如搜索域名domain、证书cert
@@ -32,7 +32,7 @@ body="腾讯"
 domain='qq.com' && app='shiro'
 ```
 
-## 2.2. fofa
+### 2.2. fofa
 
 直接输入查询语句，将从标题，html 内容，http 头信息，url 字段中搜索，其他语法如下表：
 
@@ -74,13 +74,13 @@ domain='qq.com' && app='shiro'
 | ip_after="2019-01-01"               | 搜索 2019-01-01 以后的 ip 资产(以 ip 为单位的资产数据)。 | 搜索 2019-01-01 以后的 ip 资产                                |
 | ip_before="2019-07-01"              | 搜索 2019-07-01 以前的 ip 资产(以 ip 为单位的资产数据)。 | 搜索 2019-07-01 以前的 ip 资产                                |
 
-# 3. 普通搜索引擎
+## 3. 普通搜索引擎
 
 1. baidu: https://www.baidu.com
 2. bing: https://cn.bing.com
 3. google: https://www.google.cn
 
-## 3.1. google
+### 3.1. google
 
 ```bash
 # 搜索jd.com子域名，排除www子域名
@@ -89,7 +89,7 @@ site:jd.com  -www
 site:x.x.x.*
 ```
 
-# 4. 威胁情报搜索引擎
+## 4. 威胁情报搜索引擎
 
 1. 微步: https://x.threatbook.cn/
 2. alienvault: https://otx.alienvault.com/
@@ -97,28 +97,28 @@ site:x.x.x.*
 4. threatminer: https://www.threatminer.org/
 5. virustotal: https://www.virustotal.com/gui/home/search
 
-# 5. 代码仓库
+## 5. 代码仓库
 
 1. github: https://github.com
 2. 阿里云: https://code.aliyun.com
 3. 码云: https://gitee.com
 
-## 5.1. 泄露内容
+### 5.1. 泄露内容
 
 1. 口令
 2. 邮箱
 3. api
 
-# 6. 网盘
+## 6. 网盘
 
 1. 百度网盘: https://pan.baidu.com
 2. google 网盘: https://www.google.cn/drive/apps.html
 
-## 6.1. 百度网盘检索工具
+### 6.1. 百度网盘检索工具
 
 1. www.dashengpan.com
 
-# 7. 记录
+## 7. 记录
 
 1. ★ ip138：https://site.ip138.com/{domain}/domain.htm
 2. ★ 百度云观测：http://ce.baidu.com/index/getRelatedSites?site_address={domain}
@@ -134,11 +134,11 @@ site:x.x.x.*
 12. sitedossier：http://www.sitedossier.com
 13. ★ findsubdomains：https://findsubdomains.com/
 
-# 8. 证书内容泄露
+## 8. 证书内容泄露
 
 证书指明domain范围等信息
 
-# 9. 终端程序
+## 9. 终端程序
 
 1. mobile: apk、ipa
 2. pc: exe、elf、Mach-O
