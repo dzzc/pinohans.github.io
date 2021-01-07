@@ -17,15 +17,15 @@ Shiro提供了应用安全API，被Shiro框架开发团队成为安全四大基�
 
 ## 漏洞列表
 
-| 漏洞名称                                            | 漏洞ID                                               | 影响版本         | CVSS |
-| --------------------------------------------------- | ---------------------------------------------------- | ---------------- | ---- |
-| Apache Shiro 1.2.4反序列化远程代码执行漏洞          | [CVE-2016-4437/SHIRO-550](漏洞列表/CVE-2016-4437.md) | version <= 1.2.4 | 8.1  |
-| Apache Shiro Padding Oracle Attack 远程代码执行漏洞 | CVE-2019-12422/SHIRO-721                             | version < 1.4.2  | 7.5  |
-| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-1957/SHIRO-682                              | version < 1.5.2  | 9.8  |
-| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-11989/SHIRO-782                             | version < 1.5.3  | 9.8  |
-| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-13933                                       | version < 1.6.0  | 7.5  |
-| Apache Shiro 身份验证绕过漏洞（AJP协议绕过）        | SHIRO-760                                            | 基于Tomcat版本   | 无   |
-| Apache Shiro < 1.2.3 身份验证绕过漏洞               | CVE-2014-0074/SHIRO-460                              | version < 1.2.3  | 7.5  |
+| 漏洞名称                                            | 漏洞ID                                               | 影响版本       | CVSS |
+| --------------------------------------------------- | ---------------------------------------------------- | -------------- | ---- |
+| Apache Shiro 1.2.4反序列化远程代码执行漏洞          | [CVE-2016-4437/SHIRO-550](漏洞列表/CVE-2016-4437.md) | Shiro <= 1.2.4 | 8.1  |
+| Apache Shiro Padding Oracle Attack 远程代码执行漏洞 | CVE-2019-12422/SHIRO-721                             | Shiro < 1.4.2  | 7.5  |
+| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-1957/SHIRO-682                              | Shiro < 1.5.2  | 9.8  |
+| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-11989/SHIRO-782                             | Shiro < 1.5.3  | 9.8  |
+| Apache Shiro 身份验证绕过漏洞                       | CVE-2020-13933                                       | Shiro < 1.6.0  | 7.5  |
+| Apache Shiro 身份验证绕过漏洞（AJP协议绕过）        | SHIRO-760                                            | 基于Tomcat版本 | 无   |
+| Apache Shiro < 1.2.3 身份验证绕过漏洞               | CVE-2014-0074/SHIRO-460                              | Shiro < 1.2.3  | 7.5  |
 
 ## 组件指纹
 
