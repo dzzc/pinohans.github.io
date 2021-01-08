@@ -327,8 +327,7 @@ ObjectInputStream.readObject()
 
 #### 2.3.1. jdk中的修复
 
-<!-- TODO -->
-
+限制了反序列化时，AnnotationInvocationHandler的memberValues类型，在出口处强制使用LinkedHashMap。
 
 ``` java
 // jdk/src/java.base/share/classes/sun/reflect/annotation/AnnotationInvocationHandler.java
@@ -337,6 +336,8 @@ class AnnotationInvocationHandler implements InvocationHandler, Serializable {
     private void readObject(java.io.ObjectInputStream s)
         throws java.io.IOException, ClassNotFoundException {
         ...
+        Map<String, Object> mv = new LinkedHashMap<>();
+        ...
         UnsafeAccessor.setType(this, t);
         UnsafeAccessor.setMemberValues(this, mv);
     }
@@ -344,29 +345,20 @@ class AnnotationInvocationHandler implements InvocationHandler, Serializable {
 }
 ```
 
-[代码对比](https://github.com/openjdk/jdk/commit/78853b0d4679356e3060b3caba60828451be6379#diff-c781e056923bdc431dde9cf40e42cb9666a848e2036529fc4ecf30f2861db406R474-R475)
+OpenJDK 9+103版本更新[代码对比](https://github.com/openjdk/jdk/commit/78853b0d4679356e3060b3caba60828451be6379#diff-c781e056923bdc431dde9cf40e42cb9666a848e2036529fc4ecf30f2861db406R474-R475)
 
 #### 2.3.2. commons-collections中的修复
 
-<!-- TODO -->
+InvokerTransformer序列化和反序列化之前都会check一次配置，如果开关关闭则不能进行序列化和反序列化操作。
 
 ``` java
 // src/java/org/apache/commons/collections/functors/InvokerTransformer.java
 public class InvokerTransformer implements Transformer, Serializable {
     ...
-    /**
-     * Overrides the default writeObject implementation to prevent
-     * serialization (see COLLECTIONS-580).
-     */
     private void writeObject(ObjectOutputStream os) throws IOException {
         FunctorUtils.checkUnsafeSerialization(InvokerTransformer.class);
         os.defaultWriteObject();
     }
-
-    /**
-     * Overrides the default readObject implementation to prevent
-     * de-serialization (see COLLECTIONS-580).
-     */
     private void readObject(ObjectInputStream is) throws ClassNotFoundException, IOException {
         FunctorUtils.checkUnsafeSerialization(InvokerTransformer.class);
         is.defaultReadObject();
@@ -374,7 +366,7 @@ public class InvokerTransformer implements Transformer, Serializable {
 }
 ```
 
-[代码对比](https://github.com/apache/commons-collections/commit/bce4d022f27a723fa0e0b7484dcbf0afa2dd210a#diff-b44714b7751795e83fd663802ce1201bbc62165817cbf618722dfeec85df269eR84-R100)
+commons-collections 3.2.2版本更新[代码对比](https://github.com/apache/commons-collections/commit/bce4d022f27a723fa0e0b7484dcbf0afa2dd210a#diff-b44714b7751795e83fd663802ce1201bbc62165817cbf618722dfeec85df269eR84-R100)
 
 
 ## 3. 复现
