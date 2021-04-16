@@ -10,6 +10,12 @@
   - [Zsh](./基础知识/Zsh.md)
   - [压缩](./基础知识/压缩.md)
   - [docker](./基础知识/docker.md)
+- 漏洞列表
+  - [CVE-2016-4437](./漏洞列表/CVE-2016-4437.md)
+  - [template](./漏洞列表/template.md)
+  - [CommonsCollections1](./漏洞列表/CommonsCollections1.md)
+  - [CommonsCollections2](./漏洞列表/CommonsCollections2.md)
+  - [CVE-2021-3156](./漏洞列表/CVE-2021-3156.md)
 - 常见组件
   - [commonscollections](./常见组件/commonscollections.md)
   - [shiro](./常见组件/shiro.md)
@@ -25,12 +31,6 @@
   - [目标企业员工信息](./信息收集/目标企业员工信息.md)
   - [目标IT资产-被动收集](./信息收集/目标IT资产-被动收集.md)
   - [目标企业信息](./信息收集/目标企业信息.md)
-- 外网打点
-  - [CVE-2016-4437](./外网打点/CVE-2016-4437.md)
-  - [template](./外网打点/template.md)
-  - [CommonsCollections1](./外网打点/CommonsCollections1.md)
-  - [CommonsCollections2](./外网打点/CommonsCollections2.md)
-  - [CVE-2021-3156](./外网打点/CVE-2021-3156.md)
 - 内网渗透
   - 权限维持
     - [Linux](./内网渗透/权限维持/Linux.md)
