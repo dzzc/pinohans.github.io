@@ -11,7 +11,6 @@
   - [压缩.md](./基础知识/压缩.md)
   - [docker.md](./基础知识/docker.md)
 - 常见组件
-  - [template.md](./常见组件/template.md)
   - [commonscollections.md](./常见组件/commonscollections.md)
   - [shiro.md](./常见组件/shiro.md)
   - [redis.md](./常见组件/redis.md)
