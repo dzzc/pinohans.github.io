@@ -1,32 +1,84 @@
-## 1. 反射(Reflection)
+## 1. 编译
+
+java编译过程：
+
+···
+Java源代码 ——（编译器）——> jvm可执行的Java字节码 ——（jvm解释器）——> 机器可执行的二进制机器码 ——>程序运行
+···
+
+## 2. 反编译
+
+- fernflower
+- jad
+- jd-gui
+- idea自带插件
+
+jar包本质上是将所有class文件、资源文件压缩打成一个包。
+
+## 3. web
+
+### 3.1. Servlet
+
+- servlet3.0后使用注解方式描述servlet，使用doGet和doPost为默认命名
+- servlet3.0版本之前必须在web.xml中配置
+
+### 3.2. Jsp
+
+会被编译成一个java类文件，如index.jsp在Tomcat中Jasper编译后会生成index_jsp.java和index_jsp.class两个文件。是特殊的servlet。
+
+### 3.3. Controller
+
+可以从以下关键词搜索到控制器
+
+- Controller
+- @RestController
+- RepositoryRestController
+- RequestMapping
+- GetMapping
+- PostMapping
+- PutMapping
+- DeleteMapping
+- PatchMapping
+- RepositoryRestResource
+
+### 3.4. filter
+
+以下位置可能存在过滤
+
+- web.xml全局过滤
+- 外部jar包工具
+- 自写转译，编码工具
+
+
+## 4. 反射(Reflection)
 
 反射就是Reflection，Java的反射是指程序在运行期可以拿到一个对象的所有信息。反射是为了解决在运行期，对某个实例一无所知的情况下，如何调用其方法。
 
-### 1.1. 类
+### 4.1. 类
 
 <!-- TODO -->
 
-### 1.2. 字段
+### 4.2. 字段
 
 <!-- TODO -->
 
-### 1.3. 函数
+### 4.3. 函数
 
 <!-- TODO -->
 
-### 1.4. 构造函数
+### 4.4. 构造函数
 
 <!-- TODO -->
 
-### 1.5. 继承关系
+### 4.5. 继承关系
 
 <!-- TODO -->
 
-### 1.6. 动态代理
+### 4.6. 动态代理
 
 当使用接口时，接口不可以直接被实例化，需要通过类去实现这个接口，才可以实现对这个接口中方法的调用。而动态代理实现了不需要类，直接创建某个接口的实例，对其方法进行调用。当我们调用某个动态代理对象的方法时，都会触发代理类的invoke方法，并传递对应的内容。
 
-#### 1.6.1. 例子
+#### 4.6.1. 例子
 
 ``` java
 // Test.java
@@ -62,7 +114,7 @@ public interface Hello {
 
 所有的handler都需要实现InvocationHandler这个接口，并实现其invoke方法来实现对接口的调用。
 
-## 2. final关键词
+## 5. final关键词
 
 1. 修饰类
 
@@ -84,3 +136,65 @@ public interface Hello {
 3. 修饰变量
 
 如果是基本数据类型的变量，则其数值一旦在初始化之后便不能更改；如果是引用类型的变量，则在对其初始化之后便不能再让其指向另一个对象。
+
+## 6. javassit
+
+### 6.1. demo
+
+- 代码部分
+
+``` java
+import javassist.*;
+
+public class javassit_test {
+    public static void createPseson() throws Exception {
+        ClassPool pool = ClassPool.getDefault();
+
+        // 1. 创建一个空类
+        CtClass cc = pool.makeClass("Person");
+
+        // 2. 新增一个字段 private String name;
+        // 字段名为name
+        CtField param = new CtField(pool.get("java.lang.String"), "name", cc);
+        // 访问级别是 private
+        param.setModifiers(Modifier.PRIVATE);
+        // 初始值是 "xiaoming"
+        cc.addField(param, CtField.Initializer.constant("xiaoming"));
+
+        // 3. 生成 getter、setter 方法
+        cc.addMethod(CtNewMethod.setter("setName", param));
+        cc.addMethod(CtNewMethod.getter("getName", param));
+
+        // 4. 添加无参的构造函数
+        CtConstructor cons = new CtConstructor(new CtClass[]{}, cc);
+        cons.setBody("{name = \"xiaohong\";}");
+        cc.addConstructor(cons);
+
+        // 5. 添加有参的构造函数
+        cons = new CtConstructor(new CtClass[]{pool.get("java.lang.String")}, cc);
+        // $0=this / $1,$2,$3... 代表方法参数
+        cons.setBody("{$0.name = $1;}");
+        cc.addConstructor(cons);
+
+        // 6. 创建一个名为printName方法，无参数，无返回值，输出name值
+        CtMethod ctMethod = new CtMethod(CtClass.voidType, "printName", new CtClass[]{}, cc);
+        ctMethod.setModifiers(Modifier.PUBLIC);
+        ctMethod.setBody("{System.out.println(name);}");
+        cc.addMethod(ctMethod);
+
+        //这里会将这个创建的类对象编译为.class文件
+        cc.writeFile("./");
+    }
+
+    public static void main(String[] args) {
+        try {
+            createPseson();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+
+
