@@ -18,7 +18,7 @@ class Deploy:
                     dir += walk(childpath)
 
                 if os.path.isfile(childpath) and not child.startswith('.') and not child.startswith('_') and child.endswith('.md'):
-                    file += f'{"  " * root.count("/")}- [{child}]({childpath[:-3]})\n'
+                    file += f'{"  " * root.count("/")}- [{child[:-3]}]({childpath})\n'
 
             return f'{file}{dir}'
 
