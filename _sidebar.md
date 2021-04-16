@@ -9,7 +9,6 @@
   - [SSH](./基础知识/SSH.md)
   - [Zsh](./基础知识/Zsh.md)
   - [压缩](./基础知识/压缩.md)
-  - [docker](./基础知识/docker.md)
 - 漏洞列表
   - [CVE-2016-4437](./漏洞列表/CVE-2016-4437.md)
   - [template](./漏洞列表/template.md)
@@ -17,8 +16,10 @@
   - [CommonsCollections2](./漏洞列表/CommonsCollections2.md)
   - [CVE-2021-3156](./漏洞列表/CVE-2021-3156.md)
 - 常见组件
+  - [mysql](./常见组件/mysql.md)
   - [commonscollections](./常见组件/commonscollections.md)
   - [shiro](./常见组件/shiro.md)
+  - [php](./常见组件/php.md)
   - [redis](./常见组件/redis.md)
   - [thinkphp](./常见组件/thinkphp.md)
 - 漏洞挖掘
