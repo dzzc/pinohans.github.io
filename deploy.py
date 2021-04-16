@@ -32,7 +32,7 @@ class Deploy:
                     os.remove(os.path.join(dirpath, filename))
 
     def deploy(self) -> None:
-        os.system('git add -A && git commit -m "`date`"')
+        os.system('git add -A && git commit -m "`date`" && git push origin master')
 
 if __name__ == '__main__':
     Deploy()
