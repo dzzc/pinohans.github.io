@@ -3,9 +3,10 @@
   - [CDN](./基础知识/CDN.md)
   - [CentOS](./基础知识/CentOS.md)
   - [Bash](./基础知识/Bash.md)
-  - [Mysql](./基础知识/Mysql.md)
   - [DNS](./基础知识/DNS.md)
   - [Java](./基础知识/Java.md)
+  - [go](./基础知识/go.md)
+  - [Mysql](./基础知识/Mysql.md)
   - [SSH](./基础知识/SSH.md)
   - [Zsh](./基础知识/Zsh.md)
   - [压缩](./基础知识/压缩.md)
@@ -15,11 +16,12 @@
   - [CommonsCollections1](./漏洞列表/CommonsCollections1.md)
   - [CommonsCollections2](./漏洞列表/CommonsCollections2.md)
   - [CVE-2021-3156](./漏洞列表/CVE-2021-3156.md)
+  - [chrome](./漏洞列表/chrome.md)
 - 常见组件
-  - [mysql](./常见组件/mysql.md)
   - [commonscollections](./常见组件/commonscollections.md)
   - [shiro](./常见组件/shiro.md)
   - [php](./常见组件/php.md)
+  - [mysql](./常见组件/mysql.md)
   - [redis](./常见组件/redis.md)
   - [thinkphp](./常见组件/thinkphp.md)
 - 漏洞挖掘
@@ -37,8 +39,8 @@
     - [Linux](./内网渗透/权限维持/Linux.md)
     - [Windows](./内网渗透/权限维持/Windows.md)
   - shellcode
-    - [meterpreter](./内网渗透/shellcode/meterpreter.md)
     - [免杀](./内网渗透/shellcode/免杀.md)
+    - [meterpreter](./内网渗透/shellcode/meterpreter.md)
   - rootkit
     - [Windows](./内网渗透/rootkit/Windows.md)
   - 隧道代理

