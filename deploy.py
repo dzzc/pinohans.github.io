@@ -13,7 +13,7 @@ class Deploy:
             dir = ''
             # 当前目录的所有文件项
             file = ''
-            for child in os.listdir(root):
+            for child in sorted(os.listdir(root)):
                 childpath = os.path.join(root, child)
                 if os.path.isdir(childpath) and not child.startswith('.'):
                     # 获得子目录的所有文件夹、文件项
