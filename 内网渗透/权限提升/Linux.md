@@ -1,4 +1,4 @@
-### msf
+### msf分析目标可用exploit
 
 ```
 use multi/recon/local_exploit_suggester

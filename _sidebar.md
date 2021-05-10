@@ -2,14 +2,26 @@
 - 基础知识
   - [CDN](./基础知识/CDN.md)
   - [CentOS](./基础知识/CentOS.md)
+  - [go](./基础知识/go.md)
   - [Bash](./基础知识/Bash.md)
   - [DNS](./基础知识/DNS.md)
   - [Java](./基础知识/Java.md)
-  - [go](./基础知识/go.md)
   - [Mysql](./基础知识/Mysql.md)
   - [SSH](./基础知识/SSH.md)
   - [Zsh](./基础知识/Zsh.md)
   - [压缩](./基础知识/压缩.md)
+  - [sql注入绕过速查表](./基础知识/sql注入绕过速查表.md)
+  - [XSS payload速查表](./基础知识/XSS payload速查表.md)
+  - [XSS绕过速查表](./基础知识/XSS绕过速查表.md)
+  - [国外路由器默认密码速查表](./基础知识/国外路由器默认密码速查表.md)
+  - [常见产品弱口令](./基础知识/常见产品弱口令.md)
+  - [常见端口](./基础知识/常见端口.md)
+  - [文件上传绕过速查表](./基础知识/文件上传绕过速查表.md)
+  - CSRF跨站请求伪造
+  - SQL注入
+  - XSS跨站
+  - XXE外部实体注入
+  - 反序列化漏洞
 - 漏洞列表
   - [CVE-2016-4437](./漏洞列表/CVE-2016-4437.md)
   - [template](./漏洞列表/template.md)
@@ -17,6 +29,710 @@
   - [CommonsCollections2](./漏洞列表/CommonsCollections2.md)
   - [CVE-2021-3156](./漏洞列表/CVE-2021-3156.md)
   - [chrome](./漏洞列表/chrome.md)
+  - [CKEditor4.0.1多个安全漏洞](./漏洞列表/CKEditor4.0.1多个安全漏洞.md)
+  - ActiveMQ
+    - [ActiveMQ任意文件上传漏洞](./漏洞列表/ActiveMQ/ActiveMQ任意文件上传漏洞.md)
+    - ActiveMQ任意文件上传漏洞
+  - BSPHP
+    - [BSPHP存在未授权访问](./漏洞列表/BSPHP/BSPHP存在未授权访问.md)
+    - BSPHP存在未授权访问
+  - DedeCMS
+    - [DedeCMS V5.7 SP2后台存在代码执行漏洞](./漏洞列表/DedeCMS/DedeCMS V5.7 SP2后台存在代码执行漏洞.md)
+    - [DedeCMS_v5.7_carbuyaction_存储型XSS](./漏洞列表/DedeCMS/DedeCMS_v5.7_carbuyaction_存储型XSS.md)
+    - [DedeCMS_v5.7_shops_delivery_存储型XSS](./漏洞列表/DedeCMS/DedeCMS_v5.7_shops_delivery_存储型XSS.md)
+    - [DedeCMS_v5.7_友情链接CSRF_GetShell](./漏洞列表/DedeCMS/DedeCMS_v5.7_友情链接CSRF_GetShell.md)
+    - [DedeCms v5.6 嵌入恶意代码执行漏洞](./漏洞列表/DedeCMS/DedeCms v5.6 嵌入恶意代码执行漏洞.md)
+    - [DedeCms后台地址泄露漏洞](./漏洞列表/DedeCMS/DedeCms后台地址泄露漏洞.md)
+    - [Dedecms V5.7后台任意代码执行CVE-2018-7700](./漏洞列表/DedeCMS/Dedecms V5.7后台任意代码执行CVE-2018-7700.md)
+    - [Dedecms swf文件反射型xss](./漏洞列表/DedeCMS/Dedecms swf文件反射型xss.md)
+    - [Dedecms 前台任意用户密码修改](./漏洞列表/DedeCMS/Dedecms 前台任意用户密码修改.md)
+    - [Dedecms任意用户登录SSV-97087](./漏洞列表/DedeCMS/Dedecms任意用户登录SSV-97087.md)
+    - [Dedecms前台文件上传漏洞CVE-2018-20129](./漏洞列表/DedeCMS/Dedecms前台文件上传漏洞CVE-2018-20129.md)
+    - DedeCMS V5.7 SP2后台存在代码执行漏洞
+    - DedeCMS_v5.7_carbuyaction_存储型XSS
+    - DedeCMS_v5.7_shops_delivery_存储型XSS
+    - DedeCMS_v5.7_友情链接CSRF_GetShell
+    - DedeCms后台地址泄露漏洞
+    - Dedecms V5.7后台任意代码执行CVE-2018-7700
+    - Dedecms 前台任意用户密码修改
+    - Dedecms任意用户登录SSV-97087
+    - Dedecms前台文件上传漏洞CVE-2018-20129
+  - Discuz
+    - [Discuz! 1.5-2.5 命令执行漏洞](./漏洞列表/Discuz/Discuz! 1.5-2.5 命令执行漏洞.md)
+    - [Discuz3.4越权登录漏洞](./漏洞列表/Discuz/Discuz3.4越权登录漏洞.md)
+    - [Discuz_＜3.4_birthprovince_前台任意文件删除](./漏洞列表/Discuz/Discuz_＜3.4_birthprovince_前台任意文件删除.md)
+    - [discuz-ml-rce](./漏洞列表/Discuz/discuz-ml-rce.md)
+    - Discuz! 1.5-2.5 命令执行漏洞
+    - Discuz_＜3.4_birthprovince_前台任意文件删除
+    - discuz-ml-rce
+      - batch_result
+        - 20190715111111
+      - demo
+  - drupal
+    - [Drupal远程代码执行漏洞(CVE-2017-6920)](./漏洞列表/drupal/Drupal远程代码执行漏洞(CVE-2017-6920).md)
+  - DuomiCMS
+    - [DuomiCMS3.0SQL注入](./漏洞列表/DuomiCMS/DuomiCMS3.0SQL注入.md)
+    - [DuomiCMS3.0前台代码执行](./漏洞列表/DuomiCMS/DuomiCMS3.0前台代码执行.md)
+    - DuomiCMS3.0SQL注入
+    - DuomiCMS3.0前台代码执行
+  - Ecshop
+    - [ECShop4.1.0前台免登录SQL注入](./漏洞列表/Ecshop/ECShop4.1.0前台免登录SQL注入.md)
+    - [ecshop2.x_SQL注入](./漏洞列表/Ecshop/ecshop2.x_SQL注入.md)
+    - [ecshop2.x_命令执行](./漏洞列表/Ecshop/ecshop2.x_命令执行.md)
+    - ECShop4.1.0前台免登录SQL注入
+  - EmpireCMS
+    - [EmpireCMS V7.5后台getshell漏洞](./漏洞列表/EmpireCMS/EmpireCMS V7.5后台getshell漏洞.md)
+    - [EmpireCMS V7.5后台xss漏洞](./漏洞列表/EmpireCMS/EmpireCMS V7.5后台xss漏洞.md)
+    - [EmpireCMS V7.5后台任意代码执行漏洞](./漏洞列表/EmpireCMS/EmpireCMS V7.5后台任意代码执行漏洞.md)
+    - [EmpireCMS 全版本XSS漏洞](./漏洞列表/EmpireCMS/EmpireCMS 全版本XSS漏洞.md)
+    - [EmpireCMS](./漏洞列表/EmpireCMS/EmpireCMS.md)
+    - [EmpireCMS各版本漏洞环境搭建](./漏洞列表/EmpireCMS/EmpireCMS各版本漏洞环境搭建.md)
+    - EmpireCMS V7.5后台getshell漏洞
+    - EmpireCMS V7.5后台xss漏洞
+    - EmpireCMS V7.5后台任意代码执行漏洞
+    - EmpireCMS 全版本XSS漏洞
+    - EmpireCMS
+  - FineCMS
+    - [FineCMS_v5.0.8两处getshell](./漏洞列表/FineCMS/FineCMS_v5.0.8两处getshell.md)
+    - [Finecms_v5.4存在CSRF漏洞可修改管理员账户密码](./漏洞列表/FineCMS/Finecms_v5.4存在CSRF漏洞可修改管理员账户密码.md)
+    - FineCMS最新版5.0.8两处getshell
+  - FlameCMS
+    - [CVE-2019-16309 FlameCMS 3.3.5 后台登录处存在sql注入漏洞](./漏洞列表/FlameCMS/CVE-2019-16309 FlameCMS 3.3.5 后台登录处存在sql注入漏洞.md)
+  - GreenCMS
+    - [GreenCMS v2.3.0603存在CSRF漏洞可获取webshell&增加管理员账户](./漏洞列表/GreenCMS/GreenCMS v2.3.0603存在CSRF漏洞可获取webshell&增加管理员账户.md)
+    - [GreenCMS 跨站请求伪造漏洞](./漏洞列表/GreenCMS/GreenCMS 跨站请求伪造漏洞.md)
+    - GreenCMS 跨站请求伪造漏洞
+  - HucartCMS
+    - [Hucart cms v5.7.4 CSRF漏洞可任意增加管理员账号](./漏洞列表/HucartCMS/Hucart cms v5.7.4 CSRF漏洞可任意增加管理员账号.md)
+  - indexhibitCMS
+    - [CVE-2019-16314 indexhibit cms v2.1.5 存在重装并导致getshell](./漏洞列表/indexhibitCMS/CVE-2019-16314 indexhibit cms v2.1.5 存在重装并导致getshell.md)
+    - [indexhibit cms v2.1.5 直接编辑php文件getshell](./漏洞列表/indexhibitCMS/indexhibit cms v2.1.5 直接编辑php文件getshell.md)
+  - jenkins
+    - [cve-2019-1003000-jenkins远程命令执行](./漏洞列表/jenkins/cve-2019-1003000-jenkins远程命令执行.md)
+  - Joomla
+    - [(CVE-2016-8869)Joomla_3.4.4-3.6.3_未授权创建特权用户](./漏洞列表/Joomla/(CVE-2016-8869)Joomla_3.4.4-3.6.3_未授权创建特权用户.md)
+    - [(CVE-2017-8917)Joomla 3.7.0  SQL注入漏洞](./漏洞列表/Joomla/(CVE-2017-8917)Joomla 3.7.0  SQL注入漏洞.md)
+    - [(CVE-2017-8917)Joomla_3.7.0_SQL注入](./漏洞列表/Joomla/(CVE-2017-8917)Joomla_3.7.0_SQL注入.md)
+    - [(CVE-2020-11890)JoomlaRCE远程代码执行](./漏洞列表/Joomla/(CVE-2020-11890)JoomlaRCE远程代码执行.md)
+    - [Joomla 授权 RCE漏洞 （CVE-2020-11890 CVE-2020-10238 CVE-2020-10239）](./漏洞列表/Joomla/Joomla 授权 RCE漏洞 （CVE-2020-11890 CVE-2020-10238 CVE-2020-10239）.md)
+    - [Joomla! paGO Commerce 2.5.9.0 存在SQL 注⼊](./漏洞列表/Joomla/Joomla! paGO Commerce 2.5.9.0 存在SQL 注⼊.md)
+    - [Joomla-3.4.6-远程命令执行](./漏洞列表/Joomla/Joomla-3.4.6-远程命令执行.md)
+    - Joomla 3.7.0  SQL注入漏洞CVE-2017-8917
+    - JoomlaRCE远程代码执行（CVE-2020-11890）
+    - Joomla_3.4.4-3.6.3_未授权创建特权用户(CVE-2016-8869)
+    - Joomla_3.7.0_SQL注入(CVE-2017-8917)
+  - joyplusCMS
+    - [joyplus-cms 1.6.0存在CSRF漏洞可增加管理员账户](./漏洞列表/joyplusCMS/joyplus-cms 1.6.0存在CSRF漏洞可增加管理员账户.md)
+  - KCMS
+    - KCMS5.0任意用户密码重置
+      - [KCMS5.0任意用户密码重置](./漏洞列表/KCMS/KCMS5.0任意用户密码重置/KCMS5.0任意用户密码重置.md)
+      - KCMS5.0任意用户密码重置
+    - KCMS5.0前台SQL注入
+      - [KCMS5.0前台SQL注入](./漏洞列表/KCMS/KCMS5.0前台SQL注入/KCMS5.0前台SQL注入.md)
+      - KCMS5.0前台SQL注入
+  - LFCMS
+    - [LFCMS 3.7.0存在CSRF漏洞可添加任意用户账户或任意管理员账户](./漏洞列表/LFCMS/LFCMS 3.7.0存在CSRF漏洞可添加任意用户账户或任意管理员账户.md)
+    - [LFCMS任意文件读取](./漏洞列表/LFCMS/LFCMS任意文件读取.md)
+    - [LFCMS前台sql注入（一）](./漏洞列表/LFCMS/LFCMS前台sql注入（一）.md)
+    - [LFCMS前台sql注入（二）](./漏洞列表/LFCMS/LFCMS前台sql注入（二）.md)
+    - [LFCMS后台getshell](./漏洞列表/LFCMS/LFCMS后台getshell.md)
+    - 任意文件读取
+    - 前台sql注入(一)
+    - 前台sql注入(二)
+    - 后台getshell
+  - macCMS
+    - [maccms_v10存在CSRF漏洞可增加任意账号](./漏洞列表/macCMS/maccms_v10存在CSRF漏洞可增加任意账号.md)
+  - MetinfoCMS
+    - [MetInfo V5.1.7 getshell](./漏洞列表/MetinfoCMS/MetInfo V5.1.7 getshell.md)
+    - [MetInfoCMS 5.X版本GETSHELL漏洞合集](./漏洞列表/MetinfoCMS/MetInfoCMS 5.X版本GETSHELL漏洞合集.md)
+    - [Metinfo-6.1.2版本存在XSS漏洞&SQL注入漏洞](./漏洞列表/MetinfoCMS/Metinfo-6.1.2版本存在XSS漏洞&SQL注入漏洞.md)
+    - [methifo6.0.0任意文件删除&任意文件读取](./漏洞列表/MetinfoCMS/methifo6.0.0任意文件删除&任意文件读取.md)
+  - MiniCMS
+    - [MiniCMS 1.10存在CSRF漏洞可增加管理员账户](./漏洞列表/MiniCMS/MiniCMS 1.10存在CSRF漏洞可增加管理员账户.md)
+  - Nexus
+    - [cve-2019-7238_命令执行](./漏洞列表/Nexus/cve-2019-7238_命令执行.md)
+    - [cve-2020-10199](./漏洞列表/Nexus/cve-2020-10199.md)
+    - [Nexus Repository Manager 3 远程代码执行漏洞CVE-2019-7238](./漏洞列表/Nexus/Nexus Repository Manager 3 远程代码执行漏洞CVE-2019-7238.md)
+    - [Nexus Repository Manager Groovy注入漏洞（CVE-2020-11753）](./漏洞列表/Nexus/Nexus Repository Manager Groovy注入漏洞（CVE-2020-11753）.md)
+    - [nexus oss 命令执行漏洞 (cve-2020-10199 && 10204)](./漏洞列表/Nexus/nexus oss 命令执行漏洞 (cve-2020-10199 && 10204).md)
+    - Nexus Repository Manager 3 远程代码执行漏洞CVE-2019-7238
+    - Nexus Repository Manager Groovy注入漏洞（CVE-2020-11753）
+  - OKLite
+    - [CVE-2019-16131 OKLite v1.2.25 任意文件上传漏洞](./漏洞列表/OKLite/CVE-2019-16131 OKLite v1.2.25 任意文件上传漏洞.md)
+    - [CVE-2019-16132 OKLite v1.2.25 存在任意文件删除漏洞](./漏洞列表/OKLite/CVE-2019-16132 OKLite v1.2.25 存在任意文件删除漏洞.md)
+  - PHPCMS
+    - [PHPCMS_v9.6.0_SQL注入](./漏洞列表/PHPCMS/PHPCMS_v9.6.0_SQL注入.md)
+    - [PHPCMS_v9.6.0_任意文件上传](./漏洞列表/PHPCMS/PHPCMS_v9.6.0_任意文件上传.md)
+    - [PHPCMS_v9.6.1_任意文件下载](./漏洞列表/PHPCMS/PHPCMS_v9.6.1_任意文件下载.md)
+    - [PHPCMS_v9.6.2_任意文件下载](./漏洞列表/PHPCMS/PHPCMS_v9.6.2_任意文件下载.md)
+    - PHPCMS_v9.6.0_SQL注入
+    - PHPCMS_v9.6.0_任意文件上传
+    - PHPCMS_v9.6.1_任意文件下载
+    - PHPCMS_v9.6.2_任意文件下载
+  - SCMS
+    - [S-CMS PHP v3.0存在SQL注入漏洞](./漏洞列表/SCMS/S-CMS PHP v3.0存在SQL注入漏洞.md)
+    - [S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号](./漏洞列表/SCMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md)
+  - seacms
+    - [SeaCMS v6.45前台Getshell 代码执行](./漏洞列表/seacms/SeaCMS v6.45前台Getshell 代码执行.md)
+    - [seacms6.54远程代码执行](./漏洞列表/seacms/seacms6.54远程代码执行.md)
+    - [seacms6.55远程代码执行](./漏洞列表/seacms/seacms6.55远程代码执行.md)
+    - [seacms6.61后台getshell](./漏洞列表/seacms/seacms6.61后台getshell.md)
+  - Thinkadmin
+    - [ThinkAdmin v6 列目录任意文件读取](./漏洞列表/Thinkadmin/ThinkAdmin v6 列目录任意文件读取.md)
+    - [Thinkadmin v6任意文件读取漏洞（CVE-2020-25540）](./漏洞列表/Thinkadmin/Thinkadmin v6任意文件读取漏洞（CVE-2020-25540）.md)
+  - ThinkCMS
+    - [CVE-2019-7580 thinkcmf-5.0.190111后台任意文件写入导致的代码执行](./漏洞列表/ThinkCMS/CVE-2019-7580 thinkcmf-5.0.190111后台任意文件写入导致的代码执行.md)
+    - [ThinkCMF漏洞全集和](./漏洞列表/ThinkCMS/ThinkCMF漏洞全集和.md)
+    - [ThinkCMF缓存Getshell漏洞](./漏洞列表/ThinkCMS/ThinkCMF缓存Getshell漏洞.md)
+    - 图片
+  - Thinkphp
+    - [01-Thinkphp漏洞速查](./漏洞列表/Thinkphp/01-Thinkphp漏洞速查.md)
+    - [ThinkPHP_3.2.3-5.0.10_缓存函数设计缺陷](./漏洞列表/Thinkphp/ThinkPHP_3.2.3-5.0.10_缓存函数设计缺陷.md)
+    - [Thinkphp 2.X RCE漏洞](./漏洞列表/Thinkphp/Thinkphp 2.X RCE漏洞.md)
+    - [Thinkphp 2.X RCE漏洞环境搭建](./漏洞列表/Thinkphp/Thinkphp 2.X RCE漏洞环境搭建.md)
+    - [Thinkphp 3.2.3 缓存漏洞](./漏洞列表/Thinkphp/Thinkphp 3.2.3 缓存漏洞.md)
+    - [Thinkphp 5.0.(0-21)&5.1.(3-25)sql注入漏洞](./漏洞列表/Thinkphp/Thinkphp 5.0.(0-21)&5.1.(3-25)sql注入漏洞.md)
+    - [Thinkphp 5.0.(13-15)&5.1.(0-5) sql注入漏洞](./漏洞列表/Thinkphp/Thinkphp 5.0.(13-15)&5.1.(0-5) sql注入漏洞.md)
+    - [Thinkphp 5.0.(7-22)&5.1.(0-30)远程代码执行漏洞](./漏洞列表/Thinkphp/Thinkphp 5.0.(7-22)&5.1.(0-30)远程代码执行漏洞.md)
+    - [Thinkphp 5.0.10 sql注入漏洞](./漏洞列表/Thinkphp/Thinkphp 5.0.10 sql注入漏洞.md)
+    - [Thinkphp 5.1.(-31)&5.0.(-23)远程代码执行](./漏洞列表/Thinkphp/Thinkphp 5.1.(-31)&5.0.(-23)远程代码执行.md)
+    - [Thinkphp 5.1.(16-22) sql注入漏洞](./漏洞列表/Thinkphp/Thinkphp 5.1.(16-22) sql注入漏洞.md)
+    - [Thinkphp 5.1.(6-8) sql注入漏洞](./漏洞列表/Thinkphp/Thinkphp 5.1.(6-8) sql注入漏洞.md)
+    - [Thinkphp 5.x远程代码执行漏洞环境](./漏洞列表/Thinkphp/Thinkphp 5.x远程代码执行漏洞环境.md)
+    - [Thinkphp5.X文件包含漏洞](./漏洞列表/Thinkphp/Thinkphp5.X文件包含漏洞.md)
+    - [Thinkphp5命令执行批量验证脚本](./漏洞列表/Thinkphp/Thinkphp5命令执行批量验证脚本.md)
+    - [thinkphp 3.2.3RCE漏洞](./漏洞列表/Thinkphp/thinkphp 3.2.3RCE漏洞.md)
+    - [thinkphp_5.0.x通杀gethell](./漏洞列表/Thinkphp/thinkphp_5.0.x通杀gethell.md)
+    - ThinkPHP_3.2.3-5.0.10_缓存函数设计缺陷
+    - Thinkphp 5.0.10 sql注入漏洞
+    - Thinkphp 5.x远程代码执行漏洞环境
+  - ThinkSNS
+    - [ThinkSNS_V4](./漏洞列表/ThinkSNS/ThinkSNS_V4.md)
+  - typeecho
+    - [typecho反序列化漏洞](./漏洞列表/typeecho/typecho反序列化漏洞.md)
+  - UsualToolCMS
+    - [UsualToolCMS-8.0 sql注⼊漏洞](./漏洞列表/UsualToolCMS/UsualToolCMS-8.0 sql注⼊漏洞.md)
+    - UsualToolCMS-8.0 sql注⼊漏洞
+  - vBulletin
+    - [CVE-2019-16759 vBulletin 5.x 0day pre-auth RCE exploit](./漏洞列表/vBulletin/CVE-2019-16759 vBulletin 5.x 0day pre-auth RCE exploit.md)
+    - [vBulletin 5.x RCE（CVE-2019-16759 ）](./漏洞列表/vBulletin/vBulletin 5.x RCE（CVE-2019-16759 ）.md)
+    - [vBulletin5 5.6.1 SQL注入漏洞](./漏洞列表/vBulletin/vBulletin5 5.6.1 SQL注入漏洞.md)
+    - vBulletin 5.x RCE（CVE-2019-16759 ）
+    - vBulletin5 5.6.1 SQL注入漏洞
+  - WDJACMS
+    - [WDJACMS1.5.2模板注入漏洞](./漏洞列表/WDJACMS/WDJACMS1.5.2模板注入漏洞.md)
+    - WDJACMS1.5.2模板注入漏洞
+  - WellCMS
+    - [WellCMS 2.0 Beta3 后台任意文件上传](./漏洞列表/WellCMS/WellCMS 2.0 Beta3 后台任意文件上传.md)
+    - WellCMS 2.0 Beta3 后台任意文件上传
+  - Wordpress
+    - [CVE-2018-6389](./漏洞列表/Wordpress/CVE-2018-6389.md)
+    - [CVE-2019-6977-imagecolormatch](./漏洞列表/Wordpress/CVE-2019-6977-imagecolormatch.md)
+    - [CVE-2019-6977-wordpress5.0远程命令执行](./漏洞列表/Wordpress/CVE-2019-6977-wordpress5.0远程命令执行.md)
+    - [WordPress_4.4_SSRF](./漏洞列表/Wordpress/WordPress_4.4_SSRF.md)
+    - [WordPress_4.7.0-4.7.1_未授权内容注入](./漏洞列表/Wordpress/WordPress_4.7.0-4.7.1_未授权内容注入.md)
+    - [WordPress_4.7_Info_Disclosure](./漏洞列表/Wordpress/WordPress_4.7_Info_Disclosure.md)
+    - [Wordpress 4.9.6 任意文件删除漏洞](./漏洞列表/Wordpress/Wordpress 4.9.6 任意文件删除漏洞.md)
+    - [Wordpress File-manager任意⽂件上传](./漏洞列表/Wordpress/Wordpress File-manager任意⽂件上传.md)
+    - [Wordpress IMPress for IDX Broker 低权限xss漏洞](./漏洞列表/Wordpress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md)
+    - [wordpress评论插件wpDiscuz任意文件上传漏洞](./漏洞列表/Wordpress/wordpress评论插件wpDiscuz任意文件上传漏洞.md)
+    - WordPress_4.4_SSRF
+    - WordPress_4.7.0-4.7.1_未授权内容注入
+    - WordPress_4.7_Info_Disclosure
+    - Wordpress 4.9.6 任意文件删除漏洞
+    - Wordpress File-manager任意⽂件上传
+    - Wordpress IMPress for IDX Broker 低权限xss漏洞
+    - wordpress评论插件wpDiscuz任意文件上传漏洞
+  - WTCMS
+    - [文件上传getshell](./漏洞列表/WTCMS/文件上传getshell.md)
+    - 文件上传getshell
+  - Yii
+    - [CVE-2020-15148 Yii框架反序列化远程命令执行](./漏洞列表/Yii/CVE-2020-15148 Yii框架反序列化远程命令执行.md)
+    - CVE-2020-15148 Yii框架反序列化远程命令执行
+  - YXCMS
+    - [YCCMS 3.4 任意文件上传漏洞（一）](./漏洞列表/YXCMS/YCCMS 3.4 任意文件上传漏洞（一）.md)
+    - [YCCMS 3.4 任意文件上传漏洞（二）](./漏洞列表/YXCMS/YCCMS 3.4 任意文件上传漏洞（二）.md)
+    - [YCCMS 3.4 反射型xss](./漏洞列表/YXCMS/YCCMS 3.4 反射型xss.md)
+    - [YCCMS 3.4 未授权更改管理员账号密码](./漏洞列表/YXCMS/YCCMS 3.4 未授权更改管理员账号密码.md)
+    - [YCCMS3.4任意文件删除](./漏洞列表/YXCMS/YCCMS3.4任意文件删除.md)
+    - [YXCMS 1.4.7SQL注入](./漏洞列表/YXCMS/YXCMS 1.4.7SQL注入.md)
+    - [YXCMS 1.4.7任意文件写入](./漏洞列表/YXCMS/YXCMS 1.4.7任意文件写入.md)
+    - [YXCMS 1.4.7任意文件删除（一）](./漏洞列表/YXCMS/YXCMS 1.4.7任意文件删除（一）.md)
+    - [YXCMS 1.4.7任意文件删除（二）](./漏洞列表/YXCMS/YXCMS 1.4.7任意文件删除（二）.md)
+    - [YXCMS 1.4.7储存型xss](./漏洞列表/YXCMS/YXCMS 1.4.7储存型xss.md)
+    - [YXcms 1.4.7 跨站请求伪造漏洞](./漏洞列表/YXCMS/YXcms 1.4.7 跨站请求伪造漏洞.md)
+    - YCCMS3.4任意文件上传漏洞（一）
+    - YCCMS3.4任意文件上传漏洞（二）
+    - YCCMS3.4任意文件删除
+    - YCCMS3.4未授权更改管理员账号密码
+    - YXCMS 1.4.7SQL注入
+    - YXCMS 1.4.7任意文件写入
+    - YXCMS 1.4.7任意文件删除（一）
+    - YXCMS 1.4.7任意文件删除（二）
+    - YXCMS 1.4.7储存型xss
+  - YzmCMS
+    - [YzmCMS 3.6存在XSS漏洞](./漏洞列表/YzmCMS/YzmCMS 3.6存在XSS漏洞.md)
+  - Z-Blog
+    - [Z-Blog 1.5.1.1740存在XSS漏洞](./漏洞列表/Z-Blog/Z-Blog 1.5.1.1740存在XSS漏洞.md)
+  - zabbix
+    - zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞
+      - [zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞](./漏洞列表/zabbix/zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞/zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞.md)
+      - zabbixSQL注入漏洞
+    - zabbix后台getshell
+      - [zabbix后台getshell](./漏洞列表/zabbix/zabbix后台getshell/zabbix后台getshell.md)
+      - zabbix后台getshell
+  - ZZCMS
+    - [ZZCMS201910 SQL注入](./漏洞列表/ZZCMS/ZZCMS201910 SQL注入.md)
+  - 五指CMS
+    - [五指CMS 4.1.0存在CSRF漏洞可增加管理员账户](./漏洞列表/五指CMS/五指CMS 4.1.0存在CSRF漏洞可增加管理员账户.md)
+  - 泛微
+    - [泛微 e-cology OA 前台SQL注入漏洞](./漏洞列表/泛微/泛微 e-cology OA 前台SQL注入漏洞.md)
+    - [泛微OA Bsh 远程代码执行漏洞](./漏洞列表/泛微/泛微OA Bsh 远程代码执行漏洞.md)
+    - [泛微OA数据库配置信息泄漏](./漏洞列表/泛微/泛微OA数据库配置信息泄漏.md)
+    - [泛微e-cology SQL注入漏洞](./漏洞列表/泛微/泛微e-cology SQL注入漏洞.md)
+    - [泛微e-mobile ognl注入](./漏洞列表/泛微/泛微e-mobile ognl注入.md)
+    - [泛微云桥e-bridge 目录遍历文件读取漏洞](./漏洞列表/泛微/泛微云桥e-bridge 目录遍历文件读取漏洞.md)
+    - [泛微云桥任意文件读取](./漏洞列表/泛微/泛微云桥任意文件读取.md)
+    - 泛微 e-cology OA 前台SQL注入漏洞
+    - 泛微e-cology SQL注入漏洞
+    - 泛微e-mobile ognl注入
+    - 泛微云桥e-bridge 目录遍历文件读取漏洞
+  - 熊海CMS
+    - [主目录存在文件包含](./漏洞列表/熊海CMS/主目录存在文件包含.md)
+    - [前台多处SQL注入](./漏洞列表/熊海CMS/前台多处SQL注入.md)
+    - [反射型XSS](./漏洞列表/熊海CMS/反射型XSS.md)
+    - [后台万能密码登录](./漏洞列表/熊海CMS/后台万能密码登录.md)
+    - [存储型XSS](./漏洞列表/熊海CMS/存储型XSS.md)
+    - [安装流程中存在SQL注入](./漏洞列表/熊海CMS/安装流程中存在SQL注入.md)
+    - [越权](./漏洞列表/熊海CMS/越权.md)
+    - 主目录存在文件包含
+    - 前台多处SQL注入
+    - 反射型XSS
+    - 后台万能密码登录
+    - 安装流程中存在SQL注入
+    - 越权
+  - 狂雨CMS
+    - [后台数据泄露](./漏洞列表/狂雨CMS/后台数据泄露.md)
+    - [文件包含](./漏洞列表/狂雨CMS/文件包含.md)
+    - 后台数据泄露
+    - 文件包含
+  - 用友
+    - [用友 GRP-u8注入漏洞](./漏洞列表/用友/用友 GRP-u8注入漏洞.md)
+    - [用友GRP-U8行政事业内控管理软件SQL注入漏洞](./漏洞列表/用友/用友GRP-U8行政事业内控管理软件SQL注入漏洞.md)
+  - 禅道
+    - [禅道11.6RCE漏洞](./漏洞列表/禅道/禅道11.6RCE漏洞.md)
+    - [禅道11.6任意文件读取](./漏洞列表/禅道/禅道11.6任意文件读取.md)
+    - [禅道11.6后台SQL注入](./漏洞列表/禅道/禅道11.6后台SQL注入.md)
+    - [禅道8.2 - 9.2.1前台Getshell](./漏洞列表/禅道/禅道8.2 - 9.2.1前台Getshell.md)
+    - [禅道8.2-9.2.1注入GetShell](./漏洞列表/禅道/禅道8.2-9.2.1注入GetShell.md)
+    - 禅道11.6RCE漏洞
+    - 禅道11.6任意文件读取
+    - 禅道11.6后台SQL注入
+    - 禅道8.2 - 9.2.1前台Getshell
+  - 致远
+    - [致远OA ajax.do 未授权漏洞任意文件上传](./漏洞列表/致远/致远OA ajax.do 未授权漏洞任意文件上传.md)
+    - [致远OA任意文件下载漏洞(CNVD-2020-62422)](./漏洞列表/致远/致远OA任意文件下载漏洞(CNVD-2020-62422).md)
+    - [致远OA系统多版本Getshell漏洞复现](./漏洞列表/致远/致远OA系统多版本Getshell漏洞复现.md)
+    - 图片
+  - 通达
+    - [通达OA 11.6文件删除+文件上传getshell](./漏洞列表/通达/通达OA 11.6文件删除+文件上传getshell.md)
+    - [通达OA 11.7存在sql注入](./漏洞列表/通达/通达OA 11.7存在sql注入.md)
+    - [通达OA2017前台任意用户登录漏洞](./漏洞列表/通达/通达OA2017前台任意用户登录漏洞.md)
+    - 通达OA 11.7存在sql注入
+  - Adminer
+    - [Adminer 服务器端请求伪造漏洞](./漏洞列表/Adminer/Adminer 服务器端请求伪造漏洞.md)
+    - Adminer 服务器端请求伪造漏洞
+  - CKfinder
+    - [CKfinder 1.4.3编辑器漏洞](./漏洞列表/CKfinder/CKfinder 1.4.3编辑器漏洞.md)
+    - CKfinder编辑器漏洞
+  - Cute editor
+    - [Cute editor Asp.net 解析漏洞利用](./漏洞列表/Cute editor/Cute editor Asp.net 解析漏洞利用.md)
+    - [Cute editor本地文件包含漏洞](./漏洞列表/Cute editor/Cute editor本地文件包含漏洞.md)
+  - EWeb editor
+    - [Eweb编辑器任意文件上传漏洞](./漏洞列表/EWeb editor/Eweb编辑器任意文件上传漏洞.md)
+    - [Eweb编辑器前攻击痕迹查看](./漏洞列表/EWeb editor/Eweb编辑器前攻击痕迹查看.md)
+    - [Eweb编辑器目录遍历漏洞](./漏洞列表/EWeb editor/Eweb编辑器目录遍历漏洞.md)
+    - Eweb编辑器任意文件上传漏洞
+    - Eweb编辑器前攻击痕迹查看
+    - Eweb编辑器目录遍历漏洞
+  - FCKeditor
+    - [FCKeditor编辑器漏洞通杀](./漏洞列表/FCKeditor/FCKeditor编辑器漏洞通杀.md)
+    - FCKeditor编辑器漏洞通杀
+  - Freetextbox editor
+    - [Freetextbox Asp.net解析漏洞](./漏洞列表/Freetextbox editor/Freetextbox Asp.net解析漏洞.md)
+    - [Freetextbox目录遍历漏洞](./漏洞列表/Freetextbox editor/Freetextbox目录遍历漏洞.md)
+  - Kindeditor
+    - [KindEditor 3.4.2&3.5.5列目录漏洞](./漏洞列表/Kindeditor/KindEditor 3.4.2&3.5.5列目录漏洞.md)
+    - [kindeditor 3.2.1任意文件上传漏洞](./漏洞列表/Kindeditor/kindeditor 3.2.1任意文件上传漏洞.md)
+    - [kindeditor 3.5.2-4.1上传修改拿shell](./漏洞列表/Kindeditor/kindeditor 3.5.2-4.1上传修改拿shell.md)
+    - [kindeditor 4.1.11上传漏洞](./漏洞列表/Kindeditor/kindeditor 4.1.11上传漏洞.md)
+    - [kindeditor 4.1.5上传漏洞](./漏洞列表/Kindeditor/kindeditor 4.1.5上传漏洞.md)
+    - [kindeditor 解析漏洞上传](./漏洞列表/Kindeditor/kindeditor 解析漏洞上传.md)
+    - kindeditor3.5.2-4.1上传修改拿shell
+    - kindeditor上传漏洞
+  - MSNeditor
+    - [MSN编辑器任意文件上传漏洞](./漏洞列表/MSNeditor/MSN编辑器任意文件上传漏洞.md)
+  - Ueditor
+    - [Ueditor 反射xss漏洞](./漏洞列表/Ueditor/Ueditor 反射xss漏洞.md)
+    - [Ueditor 存储xss漏洞](./漏洞列表/Ueditor/Ueditor 存储xss漏洞.md)
+    - [Ueditor编辑器.NET1.4.3.3版本任意文件上传漏洞](./漏洞列表/Ueditor/Ueditor编辑器.NET1.4.3.3版本任意文件上传漏洞.md)
+    - [Ueditor编辑器1.4.3.3版本ssrf漏洞](./漏洞列表/Ueditor/Ueditor编辑器1.4.3.3版本ssrf漏洞.md)
+  - Webhtmleditor
+    - [webhtml editor 解析漏洞利用](./漏洞列表/Webhtmleditor/webhtml editor 解析漏洞利用.md)
+  - 南方数据southidceditor
+    - [南方数据编辑器](./漏洞列表/南方数据southidceditor/南方数据编辑器.md)
+  - Adobe
+    - Adobe ColdFusion
+      - [Adobe ColdFusion 反序列化漏洞（CVE-2017-3066）](./漏洞列表/Adobe/Adobe ColdFusion/Adobe ColdFusion 反序列化漏洞（CVE-2017-3066）.md)
+      - [Adobe ColdFusion 文件读取漏洞](./漏洞列表/Adobe/Adobe ColdFusion/Adobe ColdFusion 文件读取漏洞.md)
+      - Adobe ColdFusion反序列化漏洞CVE-2017-3066
+  - Cacti
+    - [CVE-2020-8813 - Cacti v1.2.8 RCE](./漏洞列表/Cacti/CVE-2020-8813 - Cacti v1.2.8 RCE.md)
+  - Citrix
+    - [Citrix 远程代码执行漏洞复现（CVE-2019-19781）](./漏洞列表/Citrix/Citrix 远程代码执行漏洞复现（CVE-2019-19781）.md)
+  - Cobub razor
+    - [Cobub Razor 0.7.2存在跨站请求伪造漏洞](./漏洞列表/Cobub razor/Cobub Razor 0.7.2存在跨站请求伪造漏洞.md)
+    - [Cobub Razor 0.7.2越权增加管理员账户](./漏洞列表/Cobub razor/Cobub Razor 0.7.2越权增加管理员账户.md)
+    - [Cobub Razor 0.8.0存在SQL注入漏洞](./漏洞列表/Cobub razor/Cobub Razor 0.8.0存在SQL注入漏洞.md)
+    - [Cobub Razor 0.8.0存在物理路径泄露漏洞](./漏洞列表/Cobub razor/Cobub Razor 0.8.0存在物理路径泄露漏洞.md)
+    - [Couch through 2.0存在路径泄露漏洞](./漏洞列表/Cobub razor/Couch through 2.0存在路径泄露漏洞.md)
+  - Django
+    - [CVE-2020-7471 Django SQL注入漏洞 ](./漏洞列表/Django/CVE-2020-7471 Django SQL注入漏洞 .md)
+    - [CVE-2019-14234 Django JSONField SQL注入漏洞复现](./漏洞列表/Django/CVE-2019-14234 Django JSONField SQL注入漏洞复现.md)
+    - [Django GIS SQL注入漏洞复现](./漏洞列表/Django/Django GIS SQL注入漏洞复现.md)
+    - [Django SQL注入漏洞（CVE-2020-7471）复现](./漏洞列表/Django/Django SQL注入漏洞（CVE-2020-7471）复现.md)
+    - [Django任意URL跳转漏洞（CVE-2018-14574)](./漏洞列表/Django/Django任意URL跳转漏洞（CVE-2018-14574).md)
+    - DJANGO JSONFIELD SQL注入漏洞CVE-2019-14234
+    - DJANGO SQL注入漏洞CVE-2020-7471
+    - Django GIS SQL注入漏洞复现（CVE-2020-9402)
+    - Django任意URL跳转漏洞（CVE-2018-14574）
+  - Easy Chat Server
+    - [Easy Chat Server 3.1 ‘message’ Denial of Service](./漏洞列表/Easy Chat Server/Easy Chat Server 3.1 ‘message’ Denial of Service.md)
+  - Easy File Sharing Web Server
+    - [Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH)](./漏洞列表/Easy File Sharing Web Server/Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH).md)
+  - ezEIP
+    - [万户网络技术有限公司ezEIP前台存在文件上传漏洞](./漏洞列表/ezEIP/万户网络技术有限公司ezEIP前台存在文件上传漏洞.md)
+  - Fortigate SSL VPN
+    - [Fortigate SSL VPN多个漏洞](./漏洞列表/Fortigate SSL VPN/Fortigate SSL VPN多个漏洞.md)
+    - Fortigate SSL VPN
+  - FreeFtp
+    - [freeFTP1.0.8-'PASS'远程缓冲区溢出](./漏洞列表/FreeFtp/freeFTP1.0.8-'PASS'远程缓冲区溢出.md)
+  - FusionAuth
+    - [FusionAuthRCE(CVE-2020-7799)](./漏洞列表/FusionAuth/FusionAuthRCE(CVE-2020-7799).md)
+    - FusionAuthRCE(CVE-2020-7799)
+  - Git
+    - [Git凭证泄露漏洞（CVE-2020-5260）](./漏洞列表/Git/Git凭证泄露漏洞（CVE-2020-5260）.md)
+    - Git凭证泄露漏洞（CVE-2020-5260）
+  - Gitlab CEEE
+    - [Gitlab CEEE任意文件读取导致远程命令执行漏洞(CVE-2020-10977)](./漏洞列表/Gitlab CEEE/Gitlab CEEE任意文件读取导致远程命令执行漏洞(CVE-2020-10977).md)
+  - Harbor
+    - [CVE-2019-16097](./漏洞列表/Harbor/CVE-2019-16097.md)
+    - [Harbor任意管理员注册漏洞](./漏洞列表/Harbor/Harbor任意管理员注册漏洞.md)
+    - Harbor任意管理员注册漏洞
+  - Horde Groupware
+    - [Horde Groupware Webmail 5.2.22低权限RCE漏洞](./漏洞列表/Horde Groupware/Horde Groupware Webmail 5.2.22低权限RCE漏洞.md)
+    - [Horde Groupware Webmail Edition 远程命令执行](./漏洞列表/Horde Groupware/Horde Groupware Webmail Edition 远程命令执行.md)
+  - HyperBook Guestbook
+    - [HyperBook Guestbook 1.3 GBConfiguration.DAT Hashed Password信息泄露漏洞](./漏洞列表/HyperBook Guestbook/HyperBook Guestbook 1.3 GBConfiguration.DAT Hashed Password信息泄露漏洞.md)
+  - IE浏览器
+    - [IE浏览器远程代码执行漏洞](./漏洞列表/IE浏览器/IE浏览器远程代码执行漏洞.md)
+  - Jira
+    - [Atlassian Jira信息泄露漏洞](./漏洞列表/Jira/Atlassian Jira信息泄露漏洞.md)
+    - [CVE-2019-8451](./漏洞列表/Jira/CVE-2019-8451.md)
+    - Atlassian Jira信息泄露漏洞
+    - CVE-2019-8451
+  - JunmpServer
+    - [JumpServer远程命令执行](./漏洞列表/JunmpServer/JumpServer远程命令执行.md)
+  - Kibana
+    - [CVE-2019-7609-kibana低于6.6.0未授权远程代码命令执行](./漏洞列表/Kibana/CVE-2019-7609-kibana低于6.6.0未授权远程代码命令执行.md)
+  - Liferay Portal
+    - [Liferay Portal代码执行](./漏洞列表/Liferay Portal/Liferay Portal代码执行.md)
+    - Liferay Portal代码执行
+  - mini_httpd
+    - [mini_httpd任意文件读取漏洞（CVE-2018-18778）](./漏洞列表/mini_httpd/mini_httpd任意文件读取漏洞（CVE-2018-18778）.md)
+    - mini_httpd任意文件读取漏洞（CVE-2018-18778）
+  - Mobilelron
+    - [MobileIron MDM 未授权RCE EXP](./漏洞列表/Mobilelron/MobileIron MDM 未授权RCE EXP.md)
+  - Mongoose Web Server
+    - [Mongoose Web Server 6.9 - Denial of Service](./漏洞列表/Mongoose Web Server/Mongoose Web Server 6.9 - Denial of Service.md)
+  - Netlogon
+    - [Netlogon 特权提升漏洞（CVE-2020-1472）](./漏洞列表/Netlogon/Netlogon 特权提升漏洞（CVE-2020-1472）.md)
+    - Netlogon 特权提升漏洞（CVE-2020-1472）
+  - OpenSMTP
+    - [CVE-2020-8794-OpenSMTPD 远程命令执行漏洞](./漏洞列表/OpenSMTP/CVE-2020-8794-OpenSMTPD 远程命令执行漏洞.md)
+  - OSSN
+    - [OSSN任意文件读取漏洞（CVE-2020-10560）](./漏洞列表/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md)
+    - OSSN任意文件读取漏洞（CVE-2020-10560）
+  - phpMyAdmin
+    - [phpMyAdmin SQL注入(CVE-2020-0554)](./漏洞列表/phpMyAdmin/phpMyAdmin SQL注入(CVE-2020-0554).md)
+    - [phpMyAdmin文件包含漏洞](./漏洞列表/phpMyAdmin/phpMyAdmin文件包含漏洞.md)
+    - [phpmyadmin任意文件读取CVE-2018-12613](./漏洞列表/phpMyAdmin/phpmyadmin任意文件读取CVE-2018-12613.md)
+  - phpstudy
+    - [phpStudy nginx 解析漏洞](./漏洞列表/phpstudy/phpStudy nginx 解析漏洞.md)
+    - [phpmyadmin_defaultpwd](./漏洞列表/phpstudy/phpmyadmin_defaultpwd.md)
+    - [phpstudy_backdoor](./漏洞列表/phpstudy/phpstudy_backdoor.md)
+    - [phpstudy后门](./漏洞列表/phpstudy/phpstudy后门.md)
+    - [phpstudy敏感信息泄露](./漏洞列表/phpstudy/phpstudy敏感信息泄露.md)
+    - phpStudy nginx 解析漏洞
+  - rConfig
+    - [rConfig v3.9.2 RCE漏洞](./漏洞列表/rConfig/rConfig v3.9.2 RCE漏洞.md)
+  - Redis
+    - [Redis 4.x5.x 未授权访问-远程命令执行漏洞](./漏洞列表/Redis/Redis 4.x5.x 未授权访问-远程命令执行漏洞.md)
+    - redis-rogue-server
+      - RedisModulesSDK
+        - exp
+        - rmutil
+    - redis、mongodb、memcached、elasticsearch、zookeeper、ftp、CouchDB、docker、Hadoop未授权
+      - [README](./漏洞列表/Redis/redis、mongodb、memcached、elasticsearch、zookeeper、ftp、CouchDB、docker、Hadoop未授权/README.md)
+  - rsyns
+    - [rsync 未授权访问漏洞](./漏洞列表/rsyns/rsync 未授权访问漏洞.md)
+  - SaltStack
+    - [SaltStack认证绕过漏洞 CVE-2020-11651](./漏洞列表/SaltStack/SaltStack认证绕过漏洞 CVE-2020-11651.md)
+    - SaltStack认证绕过漏洞 CVE-2020-11651
+  - SharePoint
+    - [CVE-2020-1181 SharePoint远程代码执行漏洞](./漏洞列表/SharePoint/CVE-2020-1181 SharePoint远程代码执行漏洞.md)
+    - CVE-2020-1181 SharePoint远程代码执行漏洞
+  - showdoc
+    - [showdoc的api_page存在任意文件上传getshell](./漏洞列表/showdoc/showdoc的api_page存在任意文件上传getshell.md)
+  - SonicWall SSL-VPN
+    - [SonicWall SSL-VPN 未授权RCE漏洞](./漏洞列表/SonicWall SSL-VPN/SonicWall SSL-VPN 未授权RCE漏洞.md)
+  - SpamTitan
+    - [SpamTitan 7.07多个RCE漏洞](./漏洞列表/SpamTitan/SpamTitan 7.07多个RCE漏洞.md)
+  - Sprig Cloud
+    - [Spring Cloud Netflix Hystrix Dashboard SSRF漏洞](./漏洞列表/Sprig Cloud/Spring Cloud Netflix Hystrix Dashboard SSRF漏洞.md)
+  - Spring Statemachine
+    - [yii2-statemachine v2.x.x存在XSS漏洞](./漏洞列表/Spring Statemachine/yii2-statemachine v2.x.x存在XSS漏洞.md)
+  - SSH
+    - [OpenSSH命令注入CVE-2020-15778](./漏洞列表/SSH/OpenSSH命令注入CVE-2020-15778.md)
+  - TeamViewer
+    - [TeamViewer 远程代码执行漏洞(CVE-2020-13699)](./漏洞列表/TeamViewer/TeamViewer 远程代码执行漏洞(CVE-2020-13699).md)
+    - TeamViewer 远程代码执行漏洞(CVE-2020-13699)
+  - ThinVnc
+    - [CVE-2019-17662-ThinVNC 1.0b1 - Authentication Bypass](./漏洞列表/ThinVnc/CVE-2019-17662-ThinVNC 1.0b1 - Authentication Bypass.md)
+  - VMware
+    - [VMware vCenter未授权任意文件读取](./漏洞列表/VMware/VMware vCenter未授权任意文件读取.md)
+    - VMware vCenter未授权任意文件读取
+  - Webmin
+    - CVE-2019-15107
+      - [CVE-2019-15107 Webmin 1.920 远程命令执行漏洞](./漏洞列表/Webmin/CVE-2019-15107/CVE-2019-15107 Webmin 1.920 远程命令执行漏洞.md)
+      - CVE-2019-15107 Webmin 1.920 远程命令执行漏洞
+  - winrar
+    - [WinRAR穿透漏洞（CVE-2018-20250）](./漏洞列表/winrar/WinRAR穿透漏洞（CVE-2018-20250）.md)
+    - WinRAR穿透漏洞（CVE-2018-20250）
+  - X.org X server
+    - [CVE-2019-17624-X.Org X Server 1.20.4 - Local Stack Overflow-Linux图形界面X Server本地栈溢出POC](./漏洞列表/X.org X server/CVE-2019-17624-X.Org X Server 1.20.4 - Local Stack Overflow-Linux图形界面X Server本地栈溢出POC.md)
+  - 海康威视
+    - [Hikvision(CVE-2017-7921)](./漏洞列表/海康威视/Hikvision(CVE-2017-7921).md)
+    - Hikvision(CVE-2017-7921)
+  - F5
+    - [CVE-2020-5902](./漏洞列表/F5/CVE-2020-5902.md)
+  - Microsoft
+    - Microsoft Exchange Server
+      - [CVE-2020-0688 Microsoft Exchange Server远程代码执行漏洞](./漏洞列表/Microsoft/Microsoft Exchange Server/CVE-2020-0688 Microsoft Exchange Server远程代码执行漏洞.md)
+      - [CVE-2020-17083 Microsoft Exchange Server任意代码执行漏洞 POC](./漏洞列表/Microsoft/Microsoft Exchange Server/CVE-2020-17083 Microsoft Exchange Server任意代码执行漏洞 POC.md)
+      - CVE-2020-0688 Microsoft Exchange Server远程代码执行漏洞
+    - Microsoft Windows Print Spooler
+      - [CVE-2020-1048 Microsoft Windows Print Spooler提权漏洞](./漏洞列表/Microsoft/Microsoft Windows Print Spooler/CVE-2020-1048 Microsoft Windows Print Spooler提权漏洞.md)
+      - [CVE-2020-1337](./漏洞列表/Microsoft/Microsoft Windows Print Spooler/CVE-2020-1337.md)
+      - CVE-2020-1048 Microsoft Windows Print Spooler提权漏洞
+      - CVE-2020-1337
+    - Office
+      - [Microsoft.Data.Odata 安全漏洞](./漏洞列表/Microsoft/Office/Microsoft.Data.Odata 安全漏洞.md)
+    - Windows DNS Server
+      - [CVE-2020-1350 Windows DNS Server蠕虫级远程代码执行漏洞](./漏洞列表/Microsoft/Windows DNS Server/CVE-2020-1350 Windows DNS Server蠕虫级远程代码执行漏洞.md)
+      - CVE-2020-1350 Windows DNS Server蠕虫级远程代码执行漏洞
+  - TP-link
+    - [CVE-2020-9374](./漏洞列表/TP-link/CVE-2020-9374.md)
+    - [TP-Link云摄像头NCXXX系列存在命令注⼊漏洞](./漏洞列表/TP-link/TP-Link云摄像头NCXXX系列存在命令注⼊漏洞.md)
+  - 亚马逊
+    - [Amazon Kindle Fire HD (3rd Generation)内核驱动拒绝服务漏洞](./漏洞列表/亚马逊/Amazon Kindle Fire HD (3rd Generation)内核驱动拒绝服务漏洞.md)
+  - 华为
+    - [华为WS331a产品管理页面存在CSRF漏洞](./漏洞列表/华为/华为WS331a产品管理页面存在CSRF漏洞.md)
+  - 华硕
+    - [华硕RT-N13 QIS_wizard.htm 任意密码绕过](./漏洞列表/华硕/华硕RT-N13 QIS_wizard.htm 任意密码绕过.md)
+    - 华硕RT-N13 QIS_wizard.htm 任意密码绕过
+  - 友讯
+    - [CVE-2019-16920-D-Link-远程命令执行](./漏洞列表/友讯/CVE-2019-16920-D-Link-远程命令执行.md)
+  - 天融信
+    - [天融信-TopApp-LB 负载均衡系统sql注入](./漏洞列表/天融信/天融信-TopApp-LB 负载均衡系统sql注入.md)
+    - [天融信数据防泄漏系统越权修改管理员密码](./漏洞列表/天融信/天融信数据防泄漏系统越权修改管理员密码.md)
+  - 宝塔
+    - [宝塔面板phpMyAdmin未授权访问漏洞](./漏洞列表/宝塔/宝塔面板phpMyAdmin未授权访问漏洞.md)
+  - 思科
+    - [CVE-2020-27131 思科安全管理器反序列化漏洞 POC](./漏洞列表/思科/CVE-2020-27131 思科安全管理器反序列化漏洞 POC.md)
+    - [CVE-2020-3452：Cisco_ASAFTD任意文件读取漏洞](./漏洞列表/思科/CVE-2020-3452：Cisco_ASAFTD任意文件读取漏洞.md)
+  - 深信服
+    - [深信服EDR 远程命令执行-2020-hvv2](./漏洞列表/深信服/深信服EDR 远程命令执行-2020-hvv2.md)
+    - [深信服EDR任意命令执行漏洞](./漏洞列表/深信服/深信服EDR任意命令执行漏洞.md)
+    - [深信服EDR任意用户登录漏洞](./漏洞列表/深信服/深信服EDR任意用户登录漏洞.md)
+    - [深信服VPN任意修改绑定手机](./漏洞列表/深信服/深信服VPN任意修改绑定手机.md)
+    - [深信服VPN任意密码重置](./漏洞列表/深信服/深信服VPN任意密码重置.md)
+    - 深信服EDR任意命令执行漏洞
+  - 电信
+    - [天翼创维awifi路由器存在多处未授权访问漏洞](./漏洞列表/电信/天翼创维awifi路由器存在多处未授权访问漏洞.md)
+  - 绿盟
+    - [绿盟UTS综合威胁探针管理员任意登录](./漏洞列表/绿盟/绿盟UTS综合威胁探针管理员任意登录.md)
+    - [绿盟WAF绕过](./漏洞列表/绿盟/绿盟WAF绕过.md)
+    - 绿盟UTS综合威胁探针管理员任意登录
+  - 网瑞达
+    - [网瑞达webvpn远程命令执行](./漏洞列表/网瑞达/网瑞达webvpn远程命令执行.md)
+  - 联软
+    - [联软准入 任意文件上传](./漏洞列表/联软/联软准入 任意文件上传.md)
+  - 脉冲安全
+    - [CVE-2019-11510](./漏洞列表/脉冲安全/CVE-2019-11510.md)
+    - CVE-2019-11510
+  - 蜂网
+    - [CVE-2019-16313 蜂网互联企业级路由器v4.31密码泄露漏洞](./漏洞列表/蜂网/CVE-2019-16313 蜂网互联企业级路由器v4.31密码泄露漏洞.md)
+  - 金山
+    - [金山WPS Office远程堆损坏漏洞导致代码执行](./漏洞列表/金山/金山WPS Office远程堆损坏漏洞导致代码执行.md)
+  - 锐捷易
+    - [锐捷易网关 远程命令执行](./漏洞列表/锐捷易/锐捷易网关 远程命令执行.md)
+    - [锐捷易网关guest越权命令执行](./漏洞列表/锐捷易/锐捷易网关guest越权命令执行.md)
+    - [锐捷易网关远程命令执行](./漏洞列表/锐捷易/锐捷易网关远程命令执行.md)
+    - [锐捷网络 EWEB网管系统RCE漏洞 ](./漏洞列表/锐捷易/锐捷网络 EWEB网管系统RCE漏洞 .md)
+    - 锐捷易网关guest越权命令执行
+  - 齐治
+    - [齐治堡垒机前台远程命令执行漏洞](./漏洞列表/齐治/齐治堡垒机前台远程命令执行漏洞.md)
+  - Apache
+    - [Apache Cocoon XML 外部实体注入漏洞（CVE-2020-11991）](./漏洞列表/Apache/Apache Cocoon XML 外部实体注入漏洞（CVE-2020-11991）.md)
+    - [Apache DolphinScheduler高危漏洞（CVE-2020-11974、CVE-2020-13922）](./漏洞列表/Apache/Apache DolphinScheduler高危漏洞（CVE-2020-11974、CVE-2020-13922）.md)
+    - [Apache Dubbo反序列化漏洞(CVE-2019-17564)](./漏洞列表/Apache/Apache Dubbo反序列化漏洞(CVE-2019-17564).md)
+    - [Apache Dubbo恶意代码执行CVE-2020-1948](./漏洞列表/Apache/Apache Dubbo恶意代码执行CVE-2020-1948.md)
+    - [Apache Flink 任意文件读取(CVE-2020-17519 )](./漏洞列表/Apache/Apache Flink 任意文件读取(CVE-2020-17519 ).md)
+    - [Apache Flink任意文件写入漏洞(CVE-2020-17518)](./漏洞列表/Apache/Apache Flink任意文件写入漏洞(CVE-2020-17518).md)
+    - [Apache Httpd换行解析漏洞](./漏洞列表/Apache/Apache Httpd换行解析漏洞.md)
+    - [Apache Tomcat拒绝服务漏洞（CVE-2020-13935）](./漏洞列表/Apache/Apache Tomcat拒绝服务漏洞（CVE-2020-13935）.md)
+    - [Apache-Tomcat-Ajp文件包含CVE-2020-1938](./漏洞列表/Apache/Apache-Tomcat-Ajp文件包含CVE-2020-1938.md)
+    - [Apache拒绝服务漏洞](./漏洞列表/Apache/Apache拒绝服务漏洞.md)
+    - [CVE-2020-26945 mybatis二级缓存反序列化漏洞](./漏洞列表/Apache/CVE-2020-26945 mybatis二级缓存反序列化漏洞.md)
+    - Apache Cocoon XML 外部实体注入漏洞（CVE-2020-11991）
+    - Apache DolphinScheduler高危漏洞（CVE-2020-11974、CVE-2020-13922）
+    - Apache Dubbo恶意代码执行CVE-2020-1948
+    - Apache Httpd换行解析漏洞
+    - Apache Solr
+      - [Apache Solr未授权上传漏洞](./漏洞列表/Apache/Apache Solr/Apache Solr未授权上传漏洞.md)
+      - [Apache Solr远程命令执行 CVE-2019-0193](./漏洞列表/Apache/Apache Solr/Apache Solr远程命令执行 CVE-2019-0193.md)
+      - Apache Solr未授权上传漏洞
+      - Apache Solr远程命令执行 CVE-2019-0193
+    - Apache shiro
+      - Apache Shiro 权限绕过漏洞（CVE-2020-13933）
+        - [Apache Shiro 权限绕过漏洞（CVE-2020-13933）](./漏洞列表/Apache/Apache shiro/Apache Shiro 权限绕过漏洞（CVE-2020-13933）/Apache Shiro 权限绕过漏洞（CVE-2020-13933）.md)
+        - 图片
+    - Apache-Tomcat-Ajp文件包含CVE-2020-1938
+    - Couchdb任意命令执行漏洞CVE-2017-12636
+      - [Apache couchdb 任意命令执行漏洞（cve-2017-12636）](./漏洞列表/Apache/Couchdb任意命令执行漏洞CVE-2017-12636/Apache couchdb 任意命令执行漏洞（cve-2017-12636）.md)
+      - Apache couchdb 任意命令执行漏洞（cve-2017-12636）
+    - Couchedb垂直越权绕过漏洞CVE-2017-12635
+      - [Couchdb 垂直权限绕过漏洞（CVE-2017-12635）漏洞](./漏洞列表/Apache/Couchedb垂直越权绕过漏洞CVE-2017-12635/Couchdb 垂直权限绕过漏洞（CVE-2017-12635）漏洞.md)
+      - Couchdb 垂直权限绕过漏洞（CVE-2017-12635）漏洞
+    - 图片
+  - docker
+    - [docker-runC容器逃逸漏洞CVE-2019-5736](./漏洞列表/docker/docker-runC容器逃逸漏洞CVE-2019-5736.md)
+    - docker-runC容器逃逸漏洞CVE-2019-5736
+  - fastadmin
+    - [fastadmin最新版前台getshell](./漏洞列表/fastadmin/fastadmin最新版前台getshell.md)
+    - fastadmin最新版前台getshell
+  - Jackson
+    - [Jackson反序列化远程代码执行 CVE-2020-24616](./漏洞列表/Jackson/Jackson反序列化远程代码执行 CVE-2020-24616.md)
+    - [jackson-databind-rce-cve-2020-9548](./漏洞列表/Jackson/jackson-databind-rce-cve-2020-9548.md)
+    - Jackson反序列化远程代码执行 CVE-2020-24616
+  - jboss
+  - nginx
+    - [Nginx中php配置错误导致的解析漏洞](./漏洞列表/nginx/Nginx中php配置错误导致的解析漏洞.md)
+    - [Nginx文件名逻辑漏洞](./漏洞列表/nginx/Nginx文件名逻辑漏洞.md)
+    - [Nginx越界读取缓存漏洞](./漏洞列表/nginx/Nginx越界读取缓存漏洞.md)
+    - Nginx中php配置错误导致的解析漏洞
+    - Nginx文件名逻辑漏洞
+  - Shiro
+    - Shiro RememberMe 1.2.4 反序列化命令执行漏洞
+      - 【漏洞复现】Shiro RememberMe 1.2.4 反序列化命令执行漏洞_files
+    - ShiroScan-master
+      - [README](./漏洞列表/Shiro/ShiroScan-master/README.md)
+      - moule
+        - __pycache__
+        - plugins
+          - __pycache__
+  - Spring
+    - [CVE-2020-5398-Spring MVC的RFD（反射文件下载）](./漏洞列表/Spring/CVE-2020-5398-Spring MVC的RFD（反射文件下载）.md)
+    - [Spring Cloud Config Server 路径穿越与任意文件读取漏洞](./漏洞列表/Spring/Spring Cloud Config Server 路径穿越与任意文件读取漏洞.md)
+    - [cve-2018-1273_cmd](./漏洞列表/Spring/cve-2018-1273_cmd.md)
+    - Spring Cloud Config Server 路径穿越与任意文件读取漏洞
+  - Struts2
+    - [Struts2 S2-032远程代码执行](./漏洞列表/Struts2/Struts2 S2-032远程代码执行.md)
+    - [Struts2 S2-045远程代码执行](./漏洞列表/Struts2/Struts2 S2-045远程代码执行.md)
+    - [Struts2 S2-057 远程代码执行漏洞(CVE-2018-11776)](./漏洞列表/Struts2/Struts2 S2-057 远程代码执行漏洞(CVE-2018-11776).md)
+    - [Struts2-059](./漏洞列表/Struts2/Struts2-059.md)
+    - [Struts2-061](./漏洞列表/Struts2/Struts2-061.md)
+    - [readme](./漏洞列表/Struts2/readme.md)
+    - S2-048(CVE-2017-9791)
+      - [README](./漏洞列表/Struts2/S2-048(CVE-2017-9791)/README.md)
+    - Struts2 S2-032远程代码执行
+    - Struts2 S2-045远程代码执行
+    - Struts2 S2-057 远程代码执行漏洞(CVE-2018-11776)
+    - Struts2-Scan
+      - [README](./漏洞列表/Struts2/Struts2-Scan/README.md)
+    - Struts2_045-Poc
+      - [README](./漏洞列表/Struts2/Struts2_045-Poc/README.md)
+      - Search_S2_045
+        - [README](./漏洞列表/Struts2/Struts2_045-Poc/Search_S2_045/README.md)
+  - tomcat
+  - Weblogic
+    - [CVE-2019-2890-Oracle WebLogic 反序列化严重漏洞](./漏洞列表/Weblogic/CVE-2019-2890-Oracle WebLogic 反序列化严重漏洞.md)
+    - [Oracle WebLogic 反序列化严重漏洞CVE-2019-2890](./漏洞列表/Weblogic/Oracle WebLogic 反序列化严重漏洞CVE-2019-2890.md)
+    - [WebLogic UniversalExtractor反序列化漏洞(CVE-2020-14645)](./漏洞列表/Weblogic/WebLogic UniversalExtractor反序列化漏洞(CVE-2020-14645).md)
+    - [WebLogic coherence远程代码执行漏洞(CVE-2020-2555)复现](./漏洞列表/Weblogic/WebLogic coherence远程代码执行漏洞(CVE-2020-2555)复现.md)
+    - [Weblogic GIOP反序列化漏洞](./漏洞列表/Weblogic/Weblogic GIOP反序列化漏洞.md)
+    - [Weblogic 远程代码执行漏洞（CVE-2020-2883）](./漏洞列表/Weblogic/Weblogic 远程代码执行漏洞（CVE-2020-2883）.md)
+    - [Weblogic-2020-14882](./漏洞列表/Weblogic/Weblogic-2020-14882.md)
+    - [Weblogic反序列化漏洞CNVD-C-2019-48814](./漏洞列表/Weblogic/Weblogic反序列化漏洞CNVD-C-2019-48814.md)
+    - [cve 2020-14841 weblogic jndi注入](./漏洞列表/Weblogic/cve 2020-14841 weblogic jndi注入.md)
+    - [readme](./漏洞列表/Weblogic/readme.md)
+    - [weblogic任意文件读取CVE-2019-2615-2618](./漏洞列表/Weblogic/weblogic任意文件读取CVE-2019-2615-2618.md)
+    - CVE-2017-3506 & CVE-2017-10271
+      - [README](./漏洞列表/Weblogic/CVE-2017-3506 & CVE-2017-10271/README.md)
+    - CVE-2018-2628
+      - [README](./漏洞列表/Weblogic/CVE-2018-2628/README.md)
+    - CVE-2018-2893
+      - [README](./漏洞列表/Weblogic/CVE-2018-2893/README.md)
+    - Weblogic-2019-2725-2729
+      - [README](./漏洞列表/Weblogic/Weblogic-2019-2725-2729/README.md)
+    - WeblogicScanLot
+      - [README](./漏洞列表/Weblogic/WeblogicScanLot/README.md)
+      - poc
+    - cve-2017-10271
+      - [README](./漏洞列表/Weblogic/cve-2017-10271/README.md)
+      - CVE-2017-10271(JAVA XMLDecoder反序列化专用工具)
+      - __MACOSX
+        - CVE-2017-10271(JAVA XMLDecoder反序列化专用工具)
+    - weblogic任意文件读取CVE-2019-2615-2618
+    - 图片
+  - websphere
+    - [IBM WebSphere存在XXE外部实体注⼊漏洞 CVE-2020-4643](./漏洞列表/websphere/IBM WebSphere存在XXE外部实体注⼊漏洞 CVE-2020-4643.md)
+  - XStream
+    - [CVE-2019-10173 Xstream 1.4.10版本远程代码执行漏洞](./漏洞列表/XStream/CVE-2019-10173 Xstream 1.4.10版本远程代码执行漏洞.md)
+  - MacOS
+    - macOS-Kernel-Exploit
+      - [README](./漏洞列表/MacOS/macOS-Kernel-Exploit/README.md)
+  - Windows
+    - [CVE-2020-16898 Bad Neighbor  Windows TCPIP远程代码执行漏洞分析](./漏洞列表/Windows/CVE-2020-16898 Bad Neighbor  Windows TCPIP远程代码执行漏洞分析.md)
+    - [Windows DNS  Server远程代码执行漏洞（CVE-2020-1350](./漏洞列表/Windows/Windows DNS  Server远程代码执行漏洞（CVE-2020-1350.md)
+    - BlueKeep
+      - [CVE-2019-0708-msf快速搭建](./漏洞列表/Windows/BlueKeep/CVE-2019-0708-msf快速搭建.md)
+      - [README](./漏洞列表/Windows/BlueKeep/README.md)
+      - bluekeep-CVE-2019-0708-python
+        - [README](./漏洞列表/Windows/BlueKeep/bluekeep-CVE-2019-0708-python/README.md)
+      - research
+        - rdp_packets
+    - CVE-2019-0708
+      - [readme](./漏洞列表/Windows/CVE-2019-0708/readme.md)
+    - CVE-2019-0803
+      - [CVE-2019-0803-Win32k Elevation of Privilege Poc](./漏洞列表/Windows/CVE-2019-0803/CVE-2019-0803-Win32k Elevation of Privilege Poc.md)
+      - CVE-2019-0803
+        - [README](./漏洞列表/Windows/CVE-2019-0803/CVE-2019-0803/README.md)
+        - win7sp1
+          - poc_test
+    - CVE-2020-0796
+      - [CVE-2020-0796检测与修复](./漏洞列表/Windows/CVE-2020-0796/CVE-2020-0796检测与修复.md)
 - 常见组件
   - [commonscollections](./常见组件/commonscollections.md)
   - [shiro](./常见组件/shiro.md)
@@ -55,8 +771,9 @@
   - 内网横向
     - [Windows](./内网渗透/内网横向/Windows.md)
   - 权限提升
-    - [windows](./内网渗透/权限提升/windows.md)
     - [Linux](./内网渗透/权限提升/Linux.md)
+    - [windows](./内网渗透/权限提升/windows.md)
+    - [权限提升](./内网渗透/权限提升/权限提升.md)
   - msf
     - [msf](./内网渗透/msf/msf.md)
 - 逆向工程
