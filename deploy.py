@@ -23,7 +23,7 @@ class Deploy:
                         dir += childdirpath
 
                 if os.path.isfile(childpath) and not child.startswith('.') and not child.startswith('_') and (child.endswith('.md') or child.endswith('.markdown') ):
-                    file += f'{"  " * root.count("/")}- [{child[:child.rfind(".")]}]({childpath.replace(" ", "+")})\n'
+                    file += f'{"  " * root.count("/")}- [{child[:child.rfind(".")]}]({childpath.replace(" ", "%20")})\n'
 
             return f'{dir}{file}'
 
