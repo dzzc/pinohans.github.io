@@ -14,7 +14,7 @@ class Deploy:
             # 当前目录的所有文件项
             file = ''
             for child in os.listdir(root):
-                childpath = os.path.join(root, child).replace(' ', '+')
+                childpath = os.path.join(root, child)
                 if os.path.isdir(childpath) and not child.startswith('.'):
                     # 获得子目录的所有文件夹、文件项
                     childdirpath = walk(childpath)
@@ -23,7 +23,7 @@ class Deploy:
                         dir += childdirpath
 
                 if os.path.isfile(childpath) and not child.startswith('.') and not child.startswith('_') and (child.endswith('.md') or child.endswith('.markdown') ):
-                    file += f'{"  " * root.count("/")}- [{child[:-3]}]({childpath})\n'
+                    file += f'{"  " * root.count("/")}- [{child[:child.rfind(".")]}]({childpath.replace(" ", "+")})\n'
 
             return f'{dir}{file}'
 
