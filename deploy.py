@@ -9,18 +9,23 @@ class Deploy:
 
     def generator(self) -> str:
         def walk(root: str) -> str:
+            # 当前目录的所有文件夹项
             dir = ''
+            # 当前目录的所有文件项
             file = ''
             for child in os.listdir(root):
-                childpath = os.path.join(root, child)
+                childpath = os.path.join(root, child).replace(' ', '+')
                 if os.path.isdir(childpath) and not child.startswith('.'):
-                    dir += f'{"  " * root.count("/")}- {child}\n'
-                    dir += walk(childpath)
+                    # 获得子目录的所有文件夹、文件项
+                    childdirpath = walk(childpath)
+                    if childdirpath != '':
+                        dir += f'{"  " * root.count("/")}- {child}\n'
+                        dir += childdirpath
 
-                if os.path.isfile(childpath) and not child.startswith('.') and not child.startswith('_') and child.endswith('.md'):
+                if os.path.isfile(childpath) and not child.startswith('.') and not child.startswith('_') and (child.endswith('.md') or child.endswith('.markdown') ):
                     file += f'{"  " * root.count("/")}- [{child[:-3]}]({childpath})\n'
 
-            return f'{file}{dir}'
+            return f'{dir}{file}'
 
         with open('_sidebar.md', 'w') as f:
             f.write(walk('.'))
